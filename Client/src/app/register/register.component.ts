@@ -1,5 +1,5 @@
 import { Component, inject, signal } from '@angular/core';
-import { AuthServiceService } from '../services/auth-service.service';
+import { AuthService } from '../services/auth.service';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { FormsModule } from '@angular/forms';
@@ -30,7 +30,7 @@ export class RegisterComponent {
   profilePicture: string = 'https://randomuser.me/api/portraits/lego/5.jpg';
   profileImage: File | null = null;
 
-  private authService = inject(AuthServiceService);
+  private authService = inject(AuthService);
   toast = inject(MatSnackBar);
   router = inject(Router);
 

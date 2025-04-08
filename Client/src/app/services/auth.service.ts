@@ -2,15 +2,17 @@ import { HttpClient } from '@angular/common/http';
 import { inject, Injectable } from '@angular/core';
 import { Observable, tap } from 'rxjs';
 import { ApiResponse } from '../models/api-response';
+import { User } from '../models/user';
 
 @Injectable({
   providedIn: 'root',
 })
-export class AuthServiceService {
+export class AuthService {
   private baseUrl = 'http://localhost:5093/api/account';
 
   private httpClient = inject(HttpClient);
-  token = 'token';
+  private token = 'token';
+  private user = 'user';
 
   register(data: FormData): Observable<ApiResponse<string>> {
     return this.httpClient
@@ -33,5 +35,29 @@ export class AuthServiceService {
           return response;
         })
       );
+  }
+  profile(): Observable<ApiResponse<User>> {
+    return this.httpClient
+      .get<ApiResponse<User>>(`${this.baseUrl}/profile`, {
+        headers: {
+          Authorization: `Bearer ${this.getAccessToken}`,
+        },
+      })
+      .pipe(
+        tap((response) => {
+          if (response.isSuccess) {
+            localStorage.setItem(this.user, JSON.stringify(response.data));
+          }
+          return response;
+        })
+      );
+  }
+
+  get getAccessToken(): string | null {
+    return localStorage.getItem(this.token) || '';
+  }
+
+  isLoggedIn(): boolean {
+    return !!this.getAccessToken;
   }
 }
