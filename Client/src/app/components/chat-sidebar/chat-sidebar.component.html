@@ -4,11 +4,48 @@
   >
     <div class="flex items-center">
       <img
-        src="https://randomuser.me/api/portraits/lego/5.jpg"
+        src="https://randomuser.me/api/portraits/men/41.jpg"
         alt="Profile Picture"
         class="w-8 h-8 rounded-full border-y-gray-100 border-2 object-cover"
       />
-      <h1 class="text-lg font-bold">Chat</h1>
+      <div class="font-medium ml-2 text-gray-500">Ahmed</div>
     </div>
+    <div>
+      <button mat-icon-button [matMenuTriggerFor]="menu">
+        <mat-icon class="text-gray-500">more_vert</mat-icon>
+      </button>
+      <mat-menu #menu="matMenu" class="bg-white">
+        <button mat-menu-item>
+          <mat-icon class="text-gray-500">logout</mat-icon>
+          <span class="ml-2">Logout</span>
+        </button>
+      </mat-menu>
+    </div>
+  </div>
+  <div class="relative flex mt-4 items-center gap-2">
+    <input
+      type="text"
+      placeholder="Search"
+      class="bg-slate-100 border-l rounded-full focus:outline-none focus:ring-1 focus:ring-slate-100 w-full mb-3 border-slate-50 p-1 pl-10 px-3 text-slate-500 font-normal"
+    />
+    <mat-icon class="absolute left-2 top-1 pr-3 text-gray-500">search</mat-icon>
+  </div>
+  <div
+    class="py-1 h-[35rem] overflow-y-auto scrollbarItem scrollbar-thin scrollbar-thumb-gray-500 scrollbar-track-gray-200 scroll-smooth"
+  >
+    @for (item of [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21]; track
+    item) {
+    <div class="flex items-center gap-2 py-2">
+      <img
+        src="https://randomuser.me/api/portraits/men/{{ item }}.jpg"
+        alt=""
+        class="h-10 w-10 rounded-full"
+      />
+      <div>
+        <span class="text-base text-gray-600 font-normal">Ahmed</span>
+        <p class="text-sm text-gray-400">3 new messages</p>
+      </div>
+    </div>
+    }
   </div>
 </div>
