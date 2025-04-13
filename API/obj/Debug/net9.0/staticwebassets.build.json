@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "amm8CNV2cd9B/xqUS2IiHC1gdI8JJDshFj/9cy9q5Js=",
+  "Hash": "zCLvyc9+Jhyx/aNiKdHpfHnwhLqHhYYXRp4lRx4IwAM=",
   "Source": "API",
   "BasePath": "_content/API",
   "Mode": "Default",
@@ -16,6 +16,27 @@
     }
   ],
   "Assets": [
+    {
+      "Identity": "E:\\Coding\\Csharp\\Practice Projects\\Youtube\\Code with Pushpa\\Chat app\\API\\wwwroot\\uploads\\11163bb4-7f48-48e3-ad88-a9a98186f355.jpg",
+      "SourceId": "API",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\Coding\\Csharp\\Practice Projects\\Youtube\\Code with Pushpa\\Chat app\\API\\wwwroot\\",
+      "BasePath": "_content/API",
+      "RelativePath": "uploads/11163bb4-7f48-48e3-ad88-a9a98186f355#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "x2maj9x9gi",
+      "Integrity": "t2oYC93//C+osTnkNGUS/RT5hYCdulvj72d3q1Mxc2A=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\11163bb4-7f48-48e3-ad88-a9a98186f355.jpg"
+    },
     {
       "Identity": "E:\\Coding\\Csharp\\Practice Projects\\Youtube\\Code with Pushpa\\Chat app\\API\\wwwroot\\uploads\\4014ecc3-b2e1-41de-bb2f-183841801208.png",
       "SourceId": "API",
@@ -60,6 +81,88 @@
     }
   ],
   "Endpoints": [
+    {
+      "Route": "uploads/11163bb4-7f48-48e3-ad88-a9a98186f355.jpg",
+      "AssetFile": "E:\\Coding\\Csharp\\Practice Projects\\Youtube\\Code with Pushpa\\Chat app\\API\\wwwroot\\uploads\\11163bb4-7f48-48e3-ad88-a9a98186f355.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "131904"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"t2oYC93//C+osTnkNGUS/RT5hYCdulvj72d3q1Mxc2A=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 07 Apr 2025 18:41:48 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-t2oYC93//C+osTnkNGUS/RT5hYCdulvj72d3q1Mxc2A="
+        }
+      ]
+    },
+    {
+      "Route": "uploads/11163bb4-7f48-48e3-ad88-a9a98186f355.x2maj9x9gi.jpg",
+      "AssetFile": "E:\\Coding\\Csharp\\Practice Projects\\Youtube\\Code with Pushpa\\Chat app\\API\\wwwroot\\uploads\\11163bb4-7f48-48e3-ad88-a9a98186f355.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "131904"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"t2oYC93//C+osTnkNGUS/RT5hYCdulvj72d3q1Mxc2A=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 07 Apr 2025 18:41:48 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "x2maj9x9gi"
+        },
+        {
+          "Name": "label",
+          "Value": "uploads/11163bb4-7f48-48e3-ad88-a9a98186f355.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-t2oYC93//C+osTnkNGUS/RT5hYCdulvj72d3q1Mxc2A="
+        }
+      ]
+    },
     {
       "Route": "uploads/4014ecc3-b2e1-41de-bb2f-183841801208.3x0hi8zir1.png",
       "AssetFile": "E:\\Coding\\Csharp\\Practice Projects\\Youtube\\Code with Pushpa\\Chat app\\API\\wwwroot\\uploads\\4014ecc3-b2e1-41de-bb2f-183841801208.png",

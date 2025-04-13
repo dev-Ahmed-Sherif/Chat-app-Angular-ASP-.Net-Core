@@ -1,12 +1,71 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "E:\\Coding\\Csharp\\Practice Projects\\Youtube\\Code with Pushpa\\Chat app\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|e:\\coding\\csharp\\practice projects\\youtube\\code with pushpa\\chat app\\api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|solutionrelative:api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|e:\\coding\\csharp\\practice projects\\youtube\\code with pushpa\\chat app\\api\\hubs\\chathub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|solutionrelative:api\\hubs\\chathub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|e:\\coding\\csharp\\practice projects\\youtube\\code with pushpa\\chat app\\api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{CBFA08EA-AECE-205F-7B85-326FD0B81BAD}|API\\API.csproj|solutionrelative:api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "E:\\Coding\\Csharp\\Practice Projects\\Youtube\\Code with Pushpa\\Chat app\\API\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "API\\Properties\\launchSettings.json",
+              "ToolTip": "E:\\Coding\\Csharp\\Practice Projects\\Youtube\\Code with Pushpa\\Chat app\\API\\Properties\\launchSettings.json",
+              "RelativeToolTip": "API\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-04-12T11:48:10.717Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ChatHub.cs",
+              "DocumentMoniker": "E:\\Coding\\Csharp\\Practice Projects\\Youtube\\Code with Pushpa\\Chat app\\API\\Hubs\\ChatHub.cs",
+              "RelativeDocumentMoniker": "API\\Hubs\\ChatHub.cs",
+              "ToolTip": "E:\\Coding\\Csharp\\Practice Projects\\Youtube\\Code with Pushpa\\Chat app\\API\\Hubs\\ChatHub.cs",
+              "RelativeToolTip": "API\\Hubs\\ChatHub.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAYwBgAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-12T11:37:06.258Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\Coding\\Csharp\\Practice Projects\\Youtube\\Code with Pushpa\\Chat app\\API\\Program.cs",
+              "RelativeDocumentMoniker": "API\\Program.cs",
+              "ToolTip": "E:\\Coding\\Csharp\\Practice Projects\\Youtube\\Code with Pushpa\\Chat app\\API\\Program.cs*",
+              "RelativeToolTip": "API\\Program.cs*",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAAADkAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-12T11:35:03.678Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }

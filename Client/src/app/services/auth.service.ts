@@ -54,10 +54,19 @@ export class AuthService {
   }
 
   get getAccessToken(): string | null {
+    // console.log('getAccessToken', localStorage.getItem(this.token));
     return localStorage.getItem(this.token) || '';
   }
 
   isLoggedIn(): boolean {
     return !!this.getAccessToken;
+  }
+  logout() {
+    localStorage.removeItem(this.token);
+    localStorage.removeItem(this.user);
+  }
+  get currentLoggedUser(): User | null {
+    const user: User = JSON.parse(localStorage.getItem(this.user) || '{}');
+    return user ? user : null;
   }
 }

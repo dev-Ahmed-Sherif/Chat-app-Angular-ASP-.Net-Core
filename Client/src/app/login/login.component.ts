@@ -7,10 +7,16 @@ import { AuthService } from '../services/auth.service';
 import { HttpErrorResponse } from '@angular/common/http';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { ApiResponse } from '../models/api-response';
-import { Router } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 @Component({
   selector: 'app-login',
-  imports: [MatInputModule, FormsModule, MatFormFieldModule, MatIconModule],
+  imports: [
+    MatInputModule,
+    FormsModule,
+    MatFormFieldModule,
+    MatIconModule,
+    RouterLink,
+  ],
   templateUrl: './login.component.html',
   styleUrl: './login.component.css',
 })
