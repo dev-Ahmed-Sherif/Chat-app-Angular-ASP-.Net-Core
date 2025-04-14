@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "amm8CNV2cd9B/xqUS2IiHC1gdI8JJDshFj/9cy9q5Js=",
+  "Hash": "HaD4KKX0VTudojwdio4qYcZg6IuIqspDZz8YOFa54Bk=",
   "Source": "API",
   "BasePath": "_content/API",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "API\\wwwroot",
       "Source": "API",
-      "ContentRoot": "E:\\Coding\\Csharp\\Practice Projects\\Youtube\\Code with Pushpa\\Chat app\\API\\wwwroot\\",
+      "ContentRoot": "D:\\Learn\\Chat-app-Angular-ASP-.Net-Core\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "E:\\Coding\\Csharp\\Practice Projects\\Youtube\\Code with Pushpa\\Chat app\\API\\wwwroot\\uploads\\4014ecc3-b2e1-41de-bb2f-183841801208.png",
+      "Identity": "D:\\Learn\\Chat-app-Angular-ASP-.Net-Core\\API\\wwwroot\\uploads\\4014ecc3-b2e1-41de-bb2f-183841801208.png",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Coding\\Csharp\\Practice Projects\\Youtube\\Code with Pushpa\\Chat app\\API\\wwwroot\\",
+      "ContentRoot": "D:\\Learn\\Chat-app-Angular-ASP-.Net-Core\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "uploads/4014ecc3-b2e1-41de-bb2f-183841801208#[.{fingerprint}]?.png",
       "AssetKind": "All",
@@ -38,10 +38,10 @@
       "OriginalItemSpec": "wwwroot\\uploads\\4014ecc3-b2e1-41de-bb2f-183841801208.png"
     },
     {
-      "Identity": "E:\\Coding\\Csharp\\Practice Projects\\Youtube\\Code with Pushpa\\Chat app\\API\\wwwroot\\uploads\\6f8c27c5-7d41-408a-a1cb-a1d3638e42b0.jpeg",
+      "Identity": "D:\\Learn\\Chat-app-Angular-ASP-.Net-Core\\API\\wwwroot\\uploads\\6f8c27c5-7d41-408a-a1cb-a1d3638e42b0.jpeg",
       "SourceId": "API",
       "SourceType": "Discovered",
-      "ContentRoot": "E:\\Coding\\Csharp\\Practice Projects\\Youtube\\Code with Pushpa\\Chat app\\API\\wwwroot\\",
+      "ContentRoot": "D:\\Learn\\Chat-app-Angular-ASP-.Net-Core\\API\\wwwroot\\",
       "BasePath": "_content/API",
       "RelativePath": "uploads/6f8c27c5-7d41-408a-a1cb-a1d3638e42b0#[.{fingerprint}]?.jpeg",
       "AssetKind": "All",
@@ -62,7 +62,7 @@
   "Endpoints": [
     {
       "Route": "uploads/4014ecc3-b2e1-41de-bb2f-183841801208.3x0hi8zir1.png",
-      "AssetFile": "E:\\Coding\\Csharp\\Practice Projects\\Youtube\\Code with Pushpa\\Chat app\\API\\wwwroot\\uploads\\4014ecc3-b2e1-41de-bb2f-183841801208.png",
+      "AssetFile": "D:\\Learn\\Chat-app-Angular-ASP-.Net-Core\\API\\wwwroot\\uploads\\4014ecc3-b2e1-41de-bb2f-183841801208.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -83,7 +83,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 30 Mar 2025 11:03:59 GMT"
+          "Value": "Mon, 07 Apr 2025 08:03:19 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -107,7 +107,7 @@
     },
     {
       "Route": "uploads/4014ecc3-b2e1-41de-bb2f-183841801208.png",
-      "AssetFile": "E:\\Coding\\Csharp\\Practice Projects\\Youtube\\Code with Pushpa\\Chat app\\API\\wwwroot\\uploads\\4014ecc3-b2e1-41de-bb2f-183841801208.png",
+      "AssetFile": "D:\\Learn\\Chat-app-Angular-ASP-.Net-Core\\API\\wwwroot\\uploads\\4014ecc3-b2e1-41de-bb2f-183841801208.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -128,7 +128,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 30 Mar 2025 11:03:59 GMT"
+          "Value": "Mon, 07 Apr 2025 08:03:19 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -144,7 +144,7 @@
     },
     {
       "Route": "uploads/6f8c27c5-7d41-408a-a1cb-a1d3638e42b0.jpeg",
-      "AssetFile": "E:\\Coding\\Csharp\\Practice Projects\\Youtube\\Code with Pushpa\\Chat app\\API\\wwwroot\\uploads\\6f8c27c5-7d41-408a-a1cb-a1d3638e42b0.jpeg",
+      "AssetFile": "D:\\Learn\\Chat-app-Angular-ASP-.Net-Core\\API\\wwwroot\\uploads\\6f8c27c5-7d41-408a-a1cb-a1d3638e42b0.jpeg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -165,7 +165,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 04 Apr 2025 13:59:20 GMT"
+          "Value": "Mon, 07 Apr 2025 08:03:19 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -181,7 +181,7 @@
     },
     {
       "Route": "uploads/6f8c27c5-7d41-408a-a1cb-a1d3638e42b0.qsr7a3ipkl.jpeg",
-      "AssetFile": "E:\\Coding\\Csharp\\Practice Projects\\Youtube\\Code with Pushpa\\Chat app\\API\\wwwroot\\uploads\\6f8c27c5-7d41-408a-a1cb-a1d3638e42b0.jpeg",
+      "AssetFile": "D:\\Learn\\Chat-app-Angular-ASP-.Net-Core\\API\\wwwroot\\uploads\\6f8c27c5-7d41-408a-a1cb-a1d3638e42b0.jpeg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -202,7 +202,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 04 Apr 2025 13:59:20 GMT"
+          "Value": "Mon, 07 Apr 2025 08:03:19 GMT"
         },
         {
           "Name": "Cache-Control",

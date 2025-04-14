@@ -3,7 +3,7 @@ import { FormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
-import { AuthServiceService } from '../services/auth-service.service';
+import { AuthService } from '../services/auth.service';
 import { HttpErrorResponse } from '@angular/common/http';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { ApiResponse } from '../models/api-response';
@@ -18,7 +18,7 @@ export class LoginComponent {
   email!: string;
   password!: string;
 
-  private authService = inject(AuthServiceService);
+  private authService = inject(AuthService);
   private toast = inject(MatSnackBar);
   private router = inject(Router);
 
@@ -27,6 +27,7 @@ export class LoginComponent {
   login() {
     this.authService.login(this.email, this.password).subscribe({
       next: () => {
+        this.authService.me().subscribe();
         this.toast.open('Login successful', 'Close', { duration: 7000 });
       },
       error: (err: HttpErrorResponse) => {

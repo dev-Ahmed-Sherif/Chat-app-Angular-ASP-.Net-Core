@@ -18,12 +18,6 @@ import {
   getSupportedInputTypes
 } from "./chunk-UCRP5EWC.js";
 import {
-  FormGroupDirective,
-  NgControl,
-  NgForm,
-  Validators
-} from "./chunk-ZVMYQ4WO.js";
-import {
   MatCommonModule,
   _IdGenerator
 } from "./chunk-EI3PR55J.js";
@@ -31,6 +25,12 @@ import "./chunk-UBSVEEM6.js";
 import {
   Platform
 } from "./chunk-QCPBLUYQ.js";
+import {
+  FormGroupDirective,
+  NgControl,
+  NgForm,
+  Validators
+} from "./chunk-ZVMYQ4WO.js";
 import "./chunk-ILDROWX5.js";
 import {
   Directive,
