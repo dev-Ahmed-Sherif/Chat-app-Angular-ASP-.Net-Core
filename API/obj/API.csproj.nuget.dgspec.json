@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Learn\\Chat-app-Angular-ASP-.Net-Core\\API\\API.csproj": {}
+    "E:\\Coding\\Csharp\\Practice Projects\\Youtube\\Code with Pushpa\\Chat app\\API\\API.csproj": {}
   },
   "projects": {
-    "D:\\Learn\\Chat-app-Angular-ASP-.Net-Core\\API\\API.csproj": {
+    "E:\\Coding\\Csharp\\Practice Projects\\Youtube\\Code with Pushpa\\Chat app\\API\\API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Learn\\Chat-app-Angular-ASP-.Net-Core\\API\\API.csproj",
+        "projectUniqueName": "E:\\Coding\\Csharp\\Practice Projects\\Youtube\\Code with Pushpa\\Chat app\\API\\API.csproj",
         "projectName": "API",
-        "projectPath": "D:\\Learn\\Chat-app-Angular-ASP-.Net-Core\\API\\API.csproj",
-        "packagesPath": "C:\\Users\\ISDT\\.nuget\\packages\\",
-        "outputPath": "D:\\Learn\\Chat-app-Angular-ASP-.Net-Core\\API\\obj\\",
+        "projectPath": "E:\\Coding\\Csharp\\Practice Projects\\Youtube\\Code with Pushpa\\Chat app\\API\\API.csproj",
+        "packagesPath": "C:\\Users\\hp\\.nuget\\packages\\",
+        "outputPath": "E:\\Coding\\Csharp\\Practice Projects\\Youtube\\Code with Pushpa\\Chat app\\API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\ISDT\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\hp\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],

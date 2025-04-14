@@ -1,20 +1,24 @@
 {
   "Files": [
     {
-      "Id": "D:\\Learn\\Chat-app-Angular-ASP-.Net-Core\\API\\wwwroot\\uploads\\05038408-00c9-4edf-b396-e44d9cb3dba5.png",
+      "Id": "E:\\Coding\\Csharp\\Practice Projects\\Youtube\\Code with Pushpa\\Chat app\\API\\wwwroot\\uploads\\05038408-00c9-4edf-b396-e44d9cb3dba5.png",
       "PackagePath": "staticwebassets\\uploads\\05038408-00c9-4edf-b396-e44d9cb3dba5.png"
     },
     {
-      "Id": "D:\\Learn\\Chat-app-Angular-ASP-.Net-Core\\API\\wwwroot\\uploads\\11163bb4-7f48-48e3-ad88-a9a98186f355.jpg",
+      "Id": "E:\\Coding\\Csharp\\Practice Projects\\Youtube\\Code with Pushpa\\Chat app\\API\\wwwroot\\uploads\\11163bb4-7f48-48e3-ad88-a9a98186f355.jpg",
       "PackagePath": "staticwebassets\\uploads\\11163bb4-7f48-48e3-ad88-a9a98186f355.jpg"
     },
     {
-      "Id": "D:\\Learn\\Chat-app-Angular-ASP-.Net-Core\\API\\wwwroot\\uploads\\4014ecc3-b2e1-41de-bb2f-183841801208.png",
+      "Id": "E:\\Coding\\Csharp\\Practice Projects\\Youtube\\Code with Pushpa\\Chat app\\API\\wwwroot\\uploads\\4014ecc3-b2e1-41de-bb2f-183841801208.png",
       "PackagePath": "staticwebassets\\uploads\\4014ecc3-b2e1-41de-bb2f-183841801208.png"
     },
     {
-      "Id": "D:\\Learn\\Chat-app-Angular-ASP-.Net-Core\\API\\wwwroot\\uploads\\6f8c27c5-7d41-408a-a1cb-a1d3638e42b0.jpeg",
+      "Id": "E:\\Coding\\Csharp\\Practice Projects\\Youtube\\Code with Pushpa\\Chat app\\API\\wwwroot\\uploads\\6f8c27c5-7d41-408a-a1cb-a1d3638e42b0.jpeg",
       "PackagePath": "staticwebassets\\uploads\\6f8c27c5-7d41-408a-a1cb-a1d3638e42b0.jpeg"
+    },
+    {
+      "Id": "E:\\Coding\\Csharp\\Practice Projects\\Youtube\\Code with Pushpa\\Chat app\\API\\wwwroot\\uploads\\db41c459-6c89-4ba6-89ba-bc74a0149a96.jpeg",
+      "PackagePath": "staticwebassets\\uploads\\db41c459-6c89-4ba6-89ba-bc74a0149a96.jpeg"
     },
     {
       "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.API.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
