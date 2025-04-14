@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore;
 
 namespace API.Hubs;
 
-[Authorize]
-public class ChatHub(UserManager<AppUser> userManager,AppDbContext context) : Hub
+ [Authorize]
+public class ChatHub(UserManager<AppUser> userManager, AppDbContext context) : Hub
 {
     public static readonly ConcurrentDictionary<string, OnlineUserDto> onlineUsers = new();
 
@@ -44,7 +44,7 @@ public class ChatHub(UserManager<AppUser> userManager,AppDbContext context) : Hu
             await Clients.AllExcept(ConnectionId).SendAsync("Notify", currentUser);
 
         }
-        
+
         if (!string.IsNullOrEmpty(receiverId))
         {
             await LoadMessages(receiverId!);
@@ -89,7 +89,7 @@ public class ChatHub(UserManager<AppUser> userManager,AppDbContext context) : Hu
 
         var connectionId = onlineUsers.Values.FirstOrDefault(u => u.UserName == senderUserName)?.ConnectionId;
 
-        if (connectionId is not null) 
+        if (connectionId is not null)
         {
             await Clients.Client(connectionId).SendAsync("NotifyTypingToUser", senderUserName);
             // await Clients.User(recipientUserName).SendAsync("NotifyTypingToUser", senderUserName);
@@ -97,24 +97,25 @@ public class ChatHub(UserManager<AppUser> userManager,AppDbContext context) : Hu
 
     }
 
-    public async Task LoadMessages(string recipientId,int pageNumber=1)
+    public async Task LoadMessages(string recipientId, int pageNumber = 1)
     {
         int pageSize = 10;
-        
+
         var userName = Context.User!.GetUserName();
-        
+
         var currentUser = await userManager.FindByNameAsync(userName!);
-        
+
         if (currentUser is null) return;
 
         List<MessageResponseDto> messages = await context.Messages
         .Where(m => m.ReceiverId == currentUser.Id &&
-               m.ReceiverId == recipientId && 
+               m.ReceiverId == recipientId &&
                m.SenderId == currentUser.Id)
         .OrderByDescending(m => m.CreatedDate)
         .Skip((pageNumber - 1) * pageSize)
         .OrderBy(m => m.CreatedDate)
-        .Select(m => new MessageResponseDto {
+        .Select(m => new MessageResponseDto
+        {
             Id = m.Id,
             Content = m.Content,
             CreatedDate = m.CreatedDate,
@@ -158,9 +159,9 @@ public class ChatHub(UserManager<AppUser> userManager,AppDbContext context) : Hu
                 FullName = u.FullName,
                 ProfileImage = u.ProfileImage,
                 IsOnline = onlineUsersSet.Contains(u.UserName!),
-                UnreadCount = context.Messages.Count(m => 
+                UnreadCount = context.Messages.Count(m =>
                     m.ReceiverId == userName
-                    && m.SenderId != u.Id 
+                    && m.SenderId != u.Id
                     && !m.IsRead),
             })
             .OrderByDescending(m => m.IsOnline)

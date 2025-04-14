@@ -4,6 +4,7 @@ using API.Models;
 using API.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.SignalR;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 
@@ -41,7 +42,7 @@ builder.Services.AddAuthentication(opt =>
     opt.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
 }).AddJwtBearer(opt =>
 {
-    opt.SaveToken = true;
+     //opt.SaveToken = true;
     opt.RequireHttpsMetadata = false;
     opt.TokenValidationParameters = new TokenValidationParameters
     {
@@ -50,18 +51,20 @@ builder.Services.AddAuthentication(opt =>
         ValidateIssuer = false,
         ValidateAudience = false
     };
-    opt.Events = new JwtBearerEvents{
-        OnMessageReceived = context => {
+    opt.Events = new JwtBearerEvents
+    {
+        OnMessageReceived = context =>
+        {
             var accessToken = context.Request.Query["access_token"];
             var path = context.HttpContext.Request.Path;
 
-            if (!string.IsNullOrEmpty(accessToken) && 
-                (path.StartsWithSegments("/hubs/chat") || 
+            if (!string.IsNullOrEmpty(accessToken) &&
+                (path.StartsWithSegments("/chat") ||
                  path.StartsWithSegments("/hubs/notification")))
             {
                 context.Token = accessToken;
             }
-            
+
             return Task.CompletedTask;
         }
     };
@@ -71,16 +74,28 @@ builder.Services.AddTransient<FileUpload>();
 
 builder.Services.AddScoped<TokenService>();
 
-builder.Services.AddSignalR();
 
-// Configure the CORS policy.
-builder.Services.AddCors(options =>
+//Configure the CORS policy.
+builder.Services.AddCors(opt =>
 {
-    options.AddPolicy("AllowAllOrigins",
-        builder => builder.AllowAnyOrigin()
-            .AllowAnyMethod()
-            .AllowAnyHeader()); 
+    opt.AddPolicy("CorsPolice", policy =>
+    {
+        policy.AllowAnyHeader().AllowAnyMethod().WithOrigins("http://localhost:4200").AllowCredentials();
+        //policy.AllowAnyHeader().AllowAnyMethod().WithOrigins("https://localhost:4200");
+    });
 });
+
+//builder.Services.AddCors(options =>
+//{
+//    options.AddDefaultPolicy(builder =>
+//    {
+//        builder.WithOrigins("http://localhost:4200")
+//               .AllowAnyHeader()
+//               .AllowAnyMethod();
+//    });
+//});
+
+builder.Services.AddSignalR(opt => opt.EnableDetailedErrors = true);
 
 // Add services to the container.
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
@@ -94,13 +109,19 @@ if (app.Environment.IsDevelopment())
     app.MapOpenApi();
 }
 
-// app.UseHttpsRedirection();
-app.UseCors("AllowAllOrigins");
+ app.UseHttpsRedirection();
+app.UseCors("CorsPolice");
 app.UseAuthentication();
 app.UseAuthorization();
 app.UseStaticFiles();
-app.MapHub<ChatHub>("/hubs/chat");
-// app.MapHub<NotificationHub>("/hubs/notification");
 app.MapControllers();
+//app.UseRouting();
+//app.UseEndpoints(endpoints =>
+//{
+//    //endpoints.MapControllers();
+//    endpoints.MapHub<ChatHub>("/chat");
+//});
+ app.MapHub<ChatHub>("/chat");
+// app.MapHub<NotificationHub>("/hubs/notification");
 
 app.Run();

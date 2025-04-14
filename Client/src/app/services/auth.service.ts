@@ -11,8 +11,13 @@ export class AuthService {
   private baseUrl = 'http://localhost:5093/api/account';
 
   private httpClient = inject(HttpClient);
+<<<<<<< HEAD
   token = 'token';
   user = 'user';
+=======
+  private token = 'token';
+  private user = 'user';
+>>>>>>> 2874f081060585c5d1d9d9f7c0cfd9d60dcaaa7a
 
   register(data: FormData): Observable<ApiResponse<string>> {
     return this.httpClient
@@ -36,10 +41,20 @@ export class AuthService {
         })
       );
   }
+<<<<<<< HEAD
 
   me(): Observable<ApiResponse<User>> {
     return this.httpClient
       .get<ApiResponse<User>>(`${this.baseUrl}/profile`)
+=======
+  profile(): Observable<ApiResponse<User>> {
+    return this.httpClient
+      .get<ApiResponse<User>>(`${this.baseUrl}/profile`, {
+        headers: {
+          Authorization: `Bearer ${this.getAccessToken}`,
+        },
+      })
+>>>>>>> 2874f081060585c5d1d9d9f7c0cfd9d60dcaaa7a
       .pipe(
         tap((response) => {
           if (response.isSuccess) {
@@ -49,4 +64,24 @@ export class AuthService {
         })
       );
   }
+<<<<<<< HEAD
+=======
+
+  get getAccessToken(): string | null {
+    // console.log('getAccessToken', localStorage.getItem(this.token));
+    return localStorage.getItem(this.token) || '';
+  }
+
+  isLoggedIn(): boolean {
+    return !!this.getAccessToken;
+  }
+  logout() {
+    localStorage.removeItem(this.token);
+    localStorage.removeItem(this.user);
+  }
+  get currentLoggedUser(): User | null {
+    const user: User = JSON.parse(localStorage.getItem(this.user) || '{}');
+    return user ? user : null;
+  }
+>>>>>>> 2874f081060585c5d1d9d9f7c0cfd9d60dcaaa7a
 }

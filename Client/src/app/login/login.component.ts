@@ -7,10 +7,16 @@ import { AuthService } from '../services/auth.service';
 import { HttpErrorResponse } from '@angular/common/http';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { ApiResponse } from '../models/api-response';
-import { Router } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 @Component({
   selector: 'app-login',
-  imports: [MatInputModule, FormsModule, MatFormFieldModule, MatIconModule],
+  imports: [
+    MatInputModule,
+    FormsModule,
+    MatFormFieldModule,
+    MatIconModule,
+    RouterLink,
+  ],
   templateUrl: './login.component.html',
   styleUrl: './login.component.css',
 })
@@ -27,7 +33,11 @@ export class LoginComponent {
   login() {
     this.authService.login(this.email, this.password).subscribe({
       next: () => {
+<<<<<<< HEAD
         this.authService.me().subscribe();
+=======
+        this.authService.profile().subscribe();
+>>>>>>> 2874f081060585c5d1d9d9f7c0cfd9d60dcaaa7a
         this.toast.open('Login successful', 'Close', { duration: 7000 });
       },
       error: (err: HttpErrorResponse) => {
