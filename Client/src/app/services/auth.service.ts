@@ -11,8 +11,10 @@ export class AuthService {
   private baseUrl = 'http://localhost:5093/api/account';
 
   private httpClient = inject(HttpClient);
+
   private token = 'token';
   private user = 'user';
+
 
   register(data: FormData): Observable<ApiResponse<string>> {
     return this.httpClient
@@ -36,6 +38,8 @@ export class AuthService {
         })
       );
   }
+
+
   profile(): Observable<ApiResponse<User>> {
     return this.httpClient
       .get<ApiResponse<User>>(`${this.baseUrl}/profile`, {
@@ -43,6 +47,7 @@ export class AuthService {
           Authorization: `Bearer ${this.getAccessToken}`,
         },
       })
+
       .pipe(
         tap((response) => {
           if (response.isSuccess) {
@@ -52,6 +57,8 @@ export class AuthService {
         })
       );
   }
+
+
 
   get getAccessToken(): string | null {
     // console.log('getAccessToken', localStorage.getItem(this.token));
@@ -69,4 +76,5 @@ export class AuthService {
     const user: User = JSON.parse(localStorage.getItem(this.user) || '{}');
     return user ? user : null;
   }
+
 }

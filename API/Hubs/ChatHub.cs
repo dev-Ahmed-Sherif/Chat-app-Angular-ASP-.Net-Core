@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace API.Hubs;
 
- [Authorize]
+[Authorize]
 public class ChatHub(UserManager<AppUser> userManager, AppDbContext context) : Hub
 {
     public static readonly ConcurrentDictionary<string, OnlineUserDto> onlineUsers = new();
@@ -135,7 +135,7 @@ public class ChatHub(UserManager<AppUser> userManager, AppDbContext context) : H
             }
         }
         await Clients.User(currentUser.Id)
-              .SendAsync("ReceieveMessageList", messages);
+              .SendAsync("ReceiveMessageList", messages);
     }
 
     public override async Task OnDisconnectedAsync(Exception? exception)

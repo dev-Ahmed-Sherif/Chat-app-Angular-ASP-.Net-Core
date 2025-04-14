@@ -34,6 +34,7 @@ export class LoginComponent {
     this.authService.login(this.email, this.password).subscribe({
       next: () => {
         this.authService.profile().subscribe();
+
         this.toast.open('Login successful', 'Close', { duration: 7000 });
       },
       error: (err: HttpErrorResponse) => {
