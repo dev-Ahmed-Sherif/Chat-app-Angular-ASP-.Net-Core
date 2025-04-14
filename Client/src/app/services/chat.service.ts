@@ -84,4 +84,14 @@ export class ChatService {
       ? 'online'
       : this.currentOpendedChat()!.userName;
   }
+
+  loadMessages(pageNumber: number) {
+    this.hubConnection
+      ?.invoke('LoadMessages', this.currentOpendedChat()?.id, pageNumber)
+      .then(() => {})
+      .catch(() => {})
+      .finally(() => {
+        this.isLoading.update(() => false);
+      });
+  }
 }
