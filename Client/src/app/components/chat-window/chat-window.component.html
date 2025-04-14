@@ -1,3 +1,40 @@
-<div class="flex flex-col items-center justify-center h-full">
+@if (chatService.currentOpendedChat()) {
+<div class="relative w-full bg-[#dfe7f1] h-full">
+  <div
+    class="chat-header flex justify-between items-center border-b bg-white p-4"
+  >
+    <div>
+      <span class="font-bold leading-normal text-lg">
+        {{ chatService.currentOpendedChat()?.fullName | titlecase }}
+      </span>
+      <br />
+      <span class="text-sm font-bold text-gray-400">
+        {{ chatService.status(chatService.currentOpendedChat()?.userName!) }}
+      </span>
+    </div>
+    <div>
+      <mat-icon class="cursor-pointer hover:text-red-500">
+        video_call
+      </mat-icon>
+    </div>
+  </div>
+  <div>test</div>
+  <div
+    class="absolute bottom-0 flex items-center justify-center border-t w-full bg-white p-4"
+  >
+    <input
+      type="text"
+      [(ngModel)]="message"
+      class="w-full border border-gray-200 text-gray-900 rounded-full px-6 p-2 focus:outline-none focus:ring-1 focus:ring-blue-500"
+      placeholder="Type a message...."
+    />
+    <mat-icon (click)="sendMessage()" class="cursor-pointer rounded-full ml-5">
+      send
+    </mat-icon>
+  </div>
+</div>
+}@else {
+<div class="flex flex-col items-center justify-center p-4 h-full">
   <img src="chatopen.svg" />
 </div>
+}
