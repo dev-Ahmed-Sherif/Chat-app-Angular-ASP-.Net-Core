@@ -8,6 +8,9 @@
 
 # Node
 /Client/node_modules
+/Client/.angular
+/API/bin
+/API/obj
 npm-debug.log
 yarn-error.log
 

@@ -33,11 +33,8 @@ export class LoginComponent {
   login() {
     this.authService.login(this.email, this.password).subscribe({
       next: () => {
-<<<<<<< HEAD
-        this.authService.me().subscribe();
-=======
         this.authService.profile().subscribe();
->>>>>>> 2874f081060585c5d1d9d9f7c0cfd9d60dcaaa7a
+
         this.toast.open('Login successful', 'Close', { duration: 7000 });
       },
       error: (err: HttpErrorResponse) => {
