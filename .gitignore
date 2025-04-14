@@ -11,6 +11,7 @@
 /Client/.angular
 /API/bin
 /API/obj
+.vs
 npm-debug.log
 yarn-error.log
 
