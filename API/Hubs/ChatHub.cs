@@ -109,10 +109,10 @@ public class ChatHub(UserManager<AppUser> userManager, AppDbContext context) : H
 
         List<MessageResponseDto> messages = await context.Messages
         .Where(m =>
-               m.ReceiverId == currentUser.Id &&
-               m.SenderId == recipientId ||
-               m.SenderId == currentUser.Id &&
-               m.ReceiverId == recipientId)
+               (m.ReceiverId == currentUser.Id &&
+               m.SenderId == recipientId) ||
+               (m.SenderId == currentUser.Id &&
+               m.ReceiverId == recipientId))
         .OrderByDescending(m => m.CreatedDate)
         .Skip((pageNumber - 1) * pageSize)
         .Take(pageSize)
