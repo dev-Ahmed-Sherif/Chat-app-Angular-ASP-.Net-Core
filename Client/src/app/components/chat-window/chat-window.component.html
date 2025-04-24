@@ -26,6 +26,8 @@
   >
     <input
       type="text"
+      (input)="chatService.notifyTyping()"
+      (keydown.enter)="sendMessage()"
       [(ngModel)]="message"
       class="w-full border border-gray-200 text-gray-900 rounded-full px-6 p-2 focus:outline-none focus:ring-1 focus:ring-blue-500"
       placeholder="Type a message...."

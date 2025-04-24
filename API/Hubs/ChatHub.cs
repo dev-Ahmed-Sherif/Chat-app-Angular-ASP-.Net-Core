@@ -55,19 +55,19 @@ public class ChatHub(UserManager<AppUser> userManager, AppDbContext context) : H
 
     public async Task SendMessage(MessageRequestDto message)
     {
-        var senderId = Context.User!.GetUserName();
+        var senderId = Context.User!.GetUserId();
         var recipientId = message.ReceiverId;
-        var currentUser = await userManager.FindByNameAsync(senderId!);
-        var receiver = await userManager.FindByNameAsync(message.ReceiverId!);
+        var currentUser = await userManager.FindByIdAsync(senderId!);
+        var receiver = await userManager.FindByIdAsync(message.ReceiverId!);
 
         if (receiver == null) return;
 
         var newMessage = new Message
         {
-            // SenderId = senderId,
-            // ReceiverId = message.ReceiverId,
+            SenderId = senderId,
+            ReceiverId = message.ReceiverId,
             Content = message.Content,
-            Sender = currentUser!,
+            Sender = currentUser,
             Receiver = receiver,
             IsRead = false,
             CreatedDate = DateTime.Now
@@ -83,11 +83,11 @@ public class ChatHub(UserManager<AppUser> userManager, AppDbContext context) : H
     {
         var senderUserName = Context.User!.GetUserName();
         // var currentUser = await userManager.FindByNameAsync(senderUserName!);
-        var recipientUser = await userManager.FindByNameAsync(recipientUserName!);
+        // var recipientUser = await userManager.FindByNameAsync(recipientUserName!);
 
         if (senderUserName is null) return;
 
-        var connectionId = onlineUsers.Values.FirstOrDefault(u => u.UserName == senderUserName)?.ConnectionId;
+        var connectionId = onlineUsers.Values.FirstOrDefault(u => u.UserName == recipientUserName)?.ConnectionId;
 
         if (connectionId is not null)
         {
@@ -137,6 +137,9 @@ public class ChatHub(UserManager<AppUser> userManager, AppDbContext context) : H
                 await context.SaveChangesAsync();
             }
         }
+
+        await Task.Delay(1000);
+
         await Clients.User(currentUser.Id)
               .SendAsync("ReceiveMessageList", messages);
     }

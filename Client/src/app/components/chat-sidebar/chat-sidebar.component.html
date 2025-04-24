@@ -50,6 +50,9 @@
         <p class="text-sm text-gray-400">
           {{ user.unreadCount ? user.unreadCount + "new messages" : "" }}
         </p>
+        @if (user.isTyping) {
+        <app-typing-indicator />
+        }
       </div>
       @if (user.isOnline) {
       <div class="ml-auto font-medium text-xs">
