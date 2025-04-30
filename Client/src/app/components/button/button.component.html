@@ -1,0 +1,17 @@
+<button
+  type="button"
+  (click)="actionHandler()"
+  [disabled]="isDisabled() || isLoading()"
+  class="w-full p-2 mb-5 flex justify-center items-center bg-blue-900 text-white rounded-md disabled:opacity-30"
+>
+  @if (isLoading()) {
+
+  <div
+    class="w-4 h-4 border-2 mr-2 border-white border-t-transparent rounded-full animate-spin"
+  ></div>
+  } @if (isLoading()) {
+  <span>Loading...</span>
+  } @else{
+  <span>{{ text() }}</span>
+  }
+</button>

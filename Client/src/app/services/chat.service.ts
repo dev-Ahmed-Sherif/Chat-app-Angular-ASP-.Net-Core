@@ -13,7 +13,7 @@ import { Message } from '../models/message';
 })
 export class ChatService {
   private authService = inject(AuthService);
-  private hubUrl = 'http://localhost:5093/chat';
+  private hubUrl = 'http://localhost:5093/hubs/chat';
   private currentUser = this.authService.currentLoggedUser;
   onlineUsers = signal<User[]>([]);
   currentOpendedChat = signal<User | null>(null);
@@ -22,9 +22,19 @@ export class ChatService {
 
   autoScrollEnabled = signal<boolean>(true);
 
-  private hubConnection?: HubConnection;
+  private hubConnection!: HubConnection;
 
   startConnection(token: string, senderId?: string) {
+    if (this.hubConnection?.state === HubConnectionState.Connected) return;
+
+    if (this.hubConnection) {
+      this.hubConnection.off('ReceiveNewMessage');
+      this.hubConnection.off('ReceiveMessageList');
+      this.hubConnection.off('OnlineUsers');
+      this.hubConnection.off('NotifyTypingToUser');
+      this.hubConnection.off('Notify');
+    }
+
     this.hubConnection = new HubConnectionBuilder()
       .withUrl(`${this.hubUrl}?senderId=${senderId || ''}`, {
         accessTokenFactory: () => token,
@@ -74,6 +84,10 @@ export class ChatService {
 
     this.hubConnection.on('ReceiveNewMessage', (message: Message) => {
       // document.title = `New message from ${message.senderId}`;
+      let audio = new Audio('/notification.wav');
+      audio.play().catch((error) => {
+        console.error('Error playing audio:', error);
+      });
       document.title = `(1) New Message`;
       console.log('Received message:', message);
       this.chatMessages.update((messages) => [...messages, message]);

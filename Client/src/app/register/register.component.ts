@@ -9,6 +9,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import { HttpErrorResponse } from '@angular/common/http';
 import { ApiResponse } from '../models/api-response';
 import { Router, RouterLink } from '@angular/router';
+import { ButtonComponent } from '../components/button/button.component';
 
 @Component({
   selector: 'app-register',
@@ -19,6 +20,7 @@ import { Router, RouterLink } from '@angular/router';
     MatButtonModule,
     MatInputModule,
     RouterLink,
+    ButtonComponent,
   ],
   templateUrl: './register.component.html',
   styleUrl: './register.component.css',
@@ -31,12 +33,13 @@ export class RegisterComponent {
   profilePicture: string = 'https://randomuser.me/api/portraits/lego/5.jpg';
   profileImage: File | null = null;
 
-  private authService = inject(AuthService);
+  authService = inject(AuthService);
   toast = inject(MatSnackBar);
   router = inject(Router);
 
   hide = signal(true);
   register() {
+    this.authService.isLoading.set(true);
     const formData = new FormData();
     formData.append('email', this.email);
     formData.append('password', this.password);
@@ -56,6 +59,7 @@ export class RegisterComponent {
           duration: 7000,
           panelClass: ['snackbar-success'],
         });
+        this.authService.isLoading.set(false);
       },
       error: (error: HttpErrorResponse) => {
         let err = error.error as ApiResponse<string>;
@@ -63,9 +67,11 @@ export class RegisterComponent {
           duration: 7000,
           panelClass: ['snackbar-error'],
         });
+        this.authService.isLoading.set(false);
       },
       complete: () => {
         this.router.navigate(['/login']);
+        this.authService.isLoading.set(false);
       },
     });
   }

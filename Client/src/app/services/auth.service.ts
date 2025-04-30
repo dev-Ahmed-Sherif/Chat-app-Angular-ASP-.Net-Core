@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { inject, Injectable } from '@angular/core';
+import { inject, Injectable, signal } from '@angular/core';
 import { Observable, tap } from 'rxjs';
 import { ApiResponse } from '../models/api-response';
 import { User } from '../models/user';
@@ -15,6 +15,7 @@ export class AuthService {
   private token = 'token';
   private user = 'user';
 
+  isLoading = signal(false);
 
   register(data: FormData): Observable<ApiResponse<string>> {
     return this.httpClient
@@ -39,7 +40,6 @@ export class AuthService {
       );
   }
 
-
   profile(): Observable<ApiResponse<User>> {
     return this.httpClient
       .get<ApiResponse<User>>(`${this.baseUrl}/profile`, {
@@ -58,8 +58,6 @@ export class AuthService {
       );
   }
 
-
-
   get getAccessToken(): string | null {
     // console.log('getAccessToken', localStorage.getItem(this.token));
     return localStorage.getItem(this.token) || '';
@@ -76,5 +74,4 @@ export class AuthService {
     const user: User = JSON.parse(localStorage.getItem(this.user) || '{}');
     return user ? user : null;
   }
-
 }

@@ -32,7 +32,7 @@ builder.Services.AddDbContext<AppDbContext>(o =>
     o.UseSqlite(builder.Configuration.GetConnectionString("Database"))
 );
 
-builder.Services.AddIdentityCore<AppUser>()
+builder.Services.AddIdentityCore<AppUser>().AddRoles<IdentityRole>()
     .AddEntityFrameworkStores<AppDbContext>().AddDefaultTokenProviders();
 
 builder.Services.AddAuthentication(opt =>
@@ -42,7 +42,7 @@ builder.Services.AddAuthentication(opt =>
     opt.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
 }).AddJwtBearer(opt =>
 {
-     //opt.SaveToken = true;
+    //opt.SaveToken = true;
     opt.RequireHttpsMetadata = false;
     opt.TokenValidationParameters = new TokenValidationParameters
     {
@@ -59,8 +59,7 @@ builder.Services.AddAuthentication(opt =>
             var path = context.HttpContext.Request.Path;
 
             if (!string.IsNullOrEmpty(accessToken) &&
-                (path.StartsWithSegments("/chat") ||
-                 path.StartsWithSegments("/hubs/notification")))
+                path.StartsWithSegments("/hubs"))
             {
                 context.Token = accessToken;
             }
@@ -85,16 +84,6 @@ builder.Services.AddCors(opt =>
     });
 });
 
-//builder.Services.AddCors(options =>
-//{
-//    options.AddDefaultPolicy(builder =>
-//    {
-//        builder.WithOrigins("http://localhost:4200")
-//               .AllowAnyHeader()
-//               .AllowAnyMethod();
-//    });
-//});
-
 builder.Services.AddSignalR(opt => opt.EnableDetailedErrors = true);
 
 // Add services to the container.
@@ -109,7 +98,7 @@ if (app.Environment.IsDevelopment())
     app.MapOpenApi();
 }
 
- app.UseHttpsRedirection();
+app.UseHttpsRedirection();
 app.UseCors("CorsPolice");
 app.UseAuthentication();
 app.UseAuthorization();
@@ -121,7 +110,8 @@ app.MapControllers();
 //    //endpoints.MapControllers();
 //    endpoints.MapHub<ChatHub>("/chat");
 //});
- app.MapHub<ChatHub>("/chat");
-// app.MapHub<NotificationHub>("/hubs/notification");
+app.MapHub<ChatHub>("/hubs/chat");
+app.MapHub<VideoChatHub>("/hubs/video");
+// app.MapHub<VideoChatHub>("/hubs/notification");
 
 app.Run();

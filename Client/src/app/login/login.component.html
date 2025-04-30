@@ -56,13 +56,20 @@
         }
       </mat-form-field>
 
-      <button
+      <app-button
+        (action)="login()"
+        [isDisabled]="!userForm.valid"
+        [isLoading]="authService.isLoading()"
+        [text]="'Login'"
+      />
+
+      <!-- <button
         type="submit"
         [disabled]="!userForm.valid"
         class="w-full p-2 mb-5 bg-blue-900 text-white rounded-md disabled:opacity-30"
       >
         Login
-      </button>
+      </button> -->
       <p class="flex justify-center items-center gap-2 font-bold">
         <span class="text-gray-500">Don't have an account?</span>
         <a
