@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Coding\\Csharp\\Practice Projects\\Youtube\\Code with Pushpa\\Chat app\\API\\API.csproj": {}
+    "D:\\Learn\\Chat-app-Angular-ASP-.Net-Core\\API\\API.csproj": {}
   },
   "projects": {
-    "E:\\Coding\\Csharp\\Practice Projects\\Youtube\\Code with Pushpa\\Chat app\\API\\API.csproj": {
+    "D:\\Learn\\Chat-app-Angular-ASP-.Net-Core\\API\\API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Coding\\Csharp\\Practice Projects\\Youtube\\Code with Pushpa\\Chat app\\API\\API.csproj",
+        "projectUniqueName": "D:\\Learn\\Chat-app-Angular-ASP-.Net-Core\\API\\API.csproj",
         "projectName": "API",
-        "projectPath": "E:\\Coding\\Csharp\\Practice Projects\\Youtube\\Code with Pushpa\\Chat app\\API\\API.csproj",
-        "packagesPath": "C:\\Users\\hp\\.nuget\\packages\\",
-        "outputPath": "E:\\Coding\\Csharp\\Practice Projects\\Youtube\\Code with Pushpa\\Chat app\\API\\obj\\",
+        "projectPath": "D:\\Learn\\Chat-app-Angular-ASP-.Net-Core\\API\\API.csproj",
+        "packagesPath": "C:\\Users\\ISDT\\.nuget\\packages\\",
+        "outputPath": "D:\\Learn\\Chat-app-Angular-ASP-.Net-Core\\API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\hp\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\ISDT\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -94,7 +94,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.204/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

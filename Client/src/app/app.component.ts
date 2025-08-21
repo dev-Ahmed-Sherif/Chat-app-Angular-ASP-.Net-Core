@@ -13,17 +13,17 @@ import { VideoChatComponent } from './components/video-chat/video-chat.component
 export class AppComponent implements OnInit {
   title = 'client';
 
-  private signalRService = inject(VideoChatService);
+  private videoService = inject(VideoChatService);
   private authService = inject(AuthService);
   private dialog = inject(MatDialog);
   ngOnInit(): void {
     if (!this.authService.getAccessToken) return;
-    this.signalRService.startConnection();
+    this.videoService.startConnection();
     this.startOfferReceive();
   }
 
   startOfferReceive() {
-    this.signalRService.offerReceived.subscribe(async (data) => {
+    this.videoService.offerReceived.subscribe(async (data) => {
       if (data) {
         console.log('Offer received:', data);
         let audio = new Audio('/phone-ring.wav');
@@ -33,9 +33,9 @@ export class AppComponent implements OnInit {
           height: '600px',
           disableClose: false,
         });
-        this.signalRService.remoteUserId = data.senderId;
-        this.signalRService.inComingCall = true;
-        // this.signalRService.peerConnection.setRemoteDescription(
+        this.videoService.remoteUserId = data.senderId;
+        this.videoService.inComingCall = true;
+        // this.videoService.peerConnection.setRemoteDescription(
         //   new RTCSessionDescription(data.offer)
         // );
       }
