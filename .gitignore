@@ -9,11 +9,11 @@
 # Node
 /Client/node_modules
 /Client/.angular
-/API/bin
+/API/bin/
 /API/bin/Debug
 /API/bin/Release
-/API/obj
-.vs
+/API/obj/
+/.vs/
 npm-debug.log
 yarn-error.log
 
