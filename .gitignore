@@ -11,6 +11,7 @@
 /Client/.angular
 /API/bin/
 /API/bin/Debug
+/API/bin/Debug/net9.0
 /API/bin/Release
 /API/obj/
 /.vs/
