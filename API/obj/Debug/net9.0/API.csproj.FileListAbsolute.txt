@@ -324,12 +324,6 @@ E:\Coding\Csharp\Practice Projects\Youtube\Code with Pushpa\Chat app\API\obj\Deb
 E:\Coding\Csharp\Practice Projects\Youtube\Code with Pushpa\Chat app\API\obj\Debug\net9.0\staticwebassets.build.json
 E:\Coding\Csharp\Practice Projects\Youtube\Code with Pushpa\Chat app\API\obj\Debug\net9.0\staticwebassets.development.json
 E:\Coding\Csharp\Practice Projects\Youtube\Code with Pushpa\Chat app\API\obj\Debug\net9.0\staticwebassets.build.endpoints.json
-E:\Coding\Csharp\Practice Projects\Youtube\Code with Pushpa\Chat app\API\obj\Debug\net9.0\staticwebassets\msbuild.API.Microsoft.AspNetCore.StaticWebAssets.props
-E:\Coding\Csharp\Practice Projects\Youtube\Code with Pushpa\Chat app\API\obj\Debug\net9.0\staticwebassets\msbuild.API.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
-E:\Coding\Csharp\Practice Projects\Youtube\Code with Pushpa\Chat app\API\obj\Debug\net9.0\staticwebassets\msbuild.build.API.props
-E:\Coding\Csharp\Practice Projects\Youtube\Code with Pushpa\Chat app\API\obj\Debug\net9.0\staticwebassets\msbuild.buildMultiTargeting.API.props
-E:\Coding\Csharp\Practice Projects\Youtube\Code with Pushpa\Chat app\API\obj\Debug\net9.0\staticwebassets\msbuild.buildTransitive.API.props
-E:\Coding\Csharp\Practice Projects\Youtube\Code with Pushpa\Chat app\API\obj\Debug\net9.0\staticwebassets.pack.json
 E:\Coding\Csharp\Practice Projects\Youtube\Code with Pushpa\Chat app\API\obj\Debug\net9.0\API.csproj.Up2Date
 E:\Coding\Csharp\Practice Projects\Youtube\Code with Pushpa\Chat app\API\obj\Debug\net9.0\API.dll
 E:\Coding\Csharp\Practice Projects\Youtube\Code with Pushpa\Chat app\API\obj\Debug\net9.0\refint\API.dll
@@ -337,3 +331,8 @@ E:\Coding\Csharp\Practice Projects\Youtube\Code with Pushpa\Chat app\API\obj\Deb
 E:\Coding\Csharp\Practice Projects\Youtube\Code with Pushpa\Chat app\API\obj\Debug\net9.0\API.genruntimeconfig.cache
 E:\Coding\Csharp\Practice Projects\Youtube\Code with Pushpa\Chat app\API\obj\Debug\net9.0\ref\API.dll
 E:\Coding\Csharp\Practice Projects\Youtube\Code with Pushpa\Chat app\API\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
+E:\Coding\Csharp\Practice Projects\Youtube\Code with Pushpa\Chat app\API\obj\Debug\net9.0\rpswa.dswa.cache.json
+E:\Coding\Csharp\Practice Projects\Youtube\Code with Pushpa\Chat app\API\obj\Debug\net9.0\rjimswa.dswa.cache.json
+E:\Coding\Csharp\Practice Projects\Youtube\Code with Pushpa\Chat app\API\obj\Debug\net9.0\rjsmrazor.dswa.cache.json
+E:\Coding\Csharp\Practice Projects\Youtube\Code with Pushpa\Chat app\API\obj\Debug\net9.0\rjsmcshtml.dswa.cache.json
+E:\Coding\Csharp\Practice Projects\Youtube\Code with Pushpa\Chat app\API\obj\Debug\net9.0\staticwebassets.build.json.cache

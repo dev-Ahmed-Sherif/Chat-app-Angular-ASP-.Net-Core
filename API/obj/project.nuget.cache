@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "qVlRn7w+K7I=",
+  "dgSpecHash": "dAgql2kLsVE=",
   "success": true,
   "projectFilePath": "E:\\Coding\\Csharp\\Practice Projects\\Youtube\\Code with Pushpa\\Chat app\\API\\API.csproj",
   "expectedPackageFiles": [
@@ -68,5 +68,15 @@
     "C:\\Users\\hp\\.nuget\\packages\\system.text.json\\9.0.3\\system.text.json.9.0.3.nupkg.sha512",
     "C:\\Users\\hp\\.nuget\\packages\\system.threading.channels\\7.0.0\\system.threading.channels.7.0.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1900",
+      "level": "Warning",
+      "message": "Error occurred while getting package vulnerability data: Unable to load the service index for source https://api.nuget.org/v3/index.json.",
+      "projectPath": "E:\\Coding\\Csharp\\Practice Projects\\Youtube\\Code with Pushpa\\Chat app\\API\\API.csproj",
+      "warningLevel": 1,
+      "filePath": "E:\\Coding\\Csharp\\Practice Projects\\Youtube\\Code with Pushpa\\Chat app\\API\\API.csproj",
+      "targetGraphs": []
+    }
+  ]
 }

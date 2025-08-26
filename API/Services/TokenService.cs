@@ -23,7 +23,7 @@ public class TokenService(IConfiguration configuration)
             issuer: _configuration["JWTSettings:Issuer"],
             audience: _configuration["JWTSettings:Audience"],
             claims: claims,
-            expires: DateTime.Now.AddMinutes(30),
+            expires: DateTime.Now.AddDays(30),
             signingCredentials: creds
         );
         
