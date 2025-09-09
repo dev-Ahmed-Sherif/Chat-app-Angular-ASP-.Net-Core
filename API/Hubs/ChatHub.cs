@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore;
 namespace API.Hubs;
 
 [Authorize]
-public class ChatHub(UserManager<AppUser> userManager, AppDbContext context) : Hub
+internal sealed class ChatHub(UserManager<AppUser> userManager, AppDbContext context) : Hub
 {
     public static readonly ConcurrentDictionary<string, OnlineUserDto> onlineUsers = new();
 
